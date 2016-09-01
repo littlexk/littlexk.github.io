@@ -10,16 +10,15 @@
             // 辨别移动终端类型
             platform : function(){
                 var u = navigator.userAgent, app = navigator.appVersion;
-                return {
-                    // 是否是通过微信的扫一扫打开的
-                    weChat: u.toLowerCase().match(/MicroMessenger/i)=="micromessenger",
-                    // android终端或者uc浏览器
-                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
-                    // 是否为iPhone或者QQHD浏览器
-                    iPhone: u.indexOf('iPhone') > -1 ,
-                    // 是否iPad
-                    iPad: u.indexOf('iPad') > -1
-                };
+                if(u.toLowerCase().match(/MicroMessenger/i)=="micromessenger"){
+                    return "weChat";
+                }else if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+                    return "android";
+                }else if(u.indexOf('iPhone') > -1){
+                    return "iPhone";
+                }else if(u.indexOf('iPad') > -1){
+                    return "iPad";
+                }
             }(),
             // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
             language : (navigator.browserLanguage || navigator.language).toLowerCase()
