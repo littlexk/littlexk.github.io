@@ -16,7 +16,9 @@
                     // 是否为iPhone或者QQHD浏览器
                     iPhone: u.indexOf('iPhone') > -1 ,
                     // 是否iPad
-                    iPad: u.indexOf('iPad') > -1
+                    iPad: u.indexOf('iPad') > -1,
+                    // 是否是通过微信的扫一扫打开的
+                    weChat: u.indexOf('MicroMessenger') > -1
                 };
             }(),
             // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
