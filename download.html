@@ -5,34 +5,30 @@
     <meta charset="UTF-8">
     <title>移动OA下载</title>
     <script type="text/javascript">
-    var theUrl = "http://121.14.103.36";
+    
 //手机端判断各个平台浏览器及操作系统平台
-function checkPlatform(){
-  if(/android/i.test(navigator.userAgent)){
+  window.onload = function(){
+   var theUrl = "http://121.14.103.36";
+   if(/android/i.test(navigator.userAgent)){
       document.write("This is Android'browser.");//这是Android平台下浏览器
-      theUrl = "http://www.baidu.com";
+      location.href  = "http://www.baidu.com";
   }
   if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
       document.write("This is iOS'browser.");//这是iOS平台下浏览器
-      theUrl = "http://www.sina.com";
+      location.href  = "http://www.sina.com";
   }
   if(/Linux/i.test(navigator.userAgent)){
       document.write("This is Linux'browser.");//这是Linux平台下浏览器
-      theUrl = "http://www.163.com";
+      location.href  = "http://www.163.com";
   }
   if(/Linux/i.test(navigator.platform)){
       document.write("This is Linux operating system.");//这是Linux操作系统平台
-      theUrl = "http://www.sohu.com";
+      location.href  = "http://www.sohu.com";
   }
   if(/MicroMessenger/i.test(navigator.userAgent)){
       document.write("请通过浏览器打开！");//这是微信平台下浏览器
-      location.href = "";
      // theUrl = "http://www.qq.com";
   }
-}
-  window.onload = function(){
-    checkPlatform();
-    location.href = theUrl;
   };
 </script>
 </head>
