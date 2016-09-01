@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>手机APP下载页面：根据终端辨别下载地址</title>
+    <title>移动OA下载</title>
     <script type="text/javascript">
         // 获取终端的相关信息
         var Terminal = {
@@ -18,7 +18,7 @@
                     // 是否iPad
                     iPad: u.indexOf('iPad') > -1,
                     // 是否是通过微信的扫一扫打开的
-                    weChat: u.toLowerCase().indexOf('micromessenger') > -1
+                    weChat: u.match(/MicroMessenger/i)=="micromessenger"
                 };
             }(),
             // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
