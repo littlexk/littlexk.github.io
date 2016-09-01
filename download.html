@@ -18,7 +18,7 @@
                     // 是否iPad
                     iPad: u.indexOf('iPad') > -1,
                     // 是否是通过微信的扫一扫打开的
-                    weChat: u.match(/MicroMessenger/i)=="micromessenger"
+                    weChat: u.toLowerCase().match(/MicroMessenger/i)=="micromessenger"
                 };
             }(),
             // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
