@@ -29,11 +29,11 @@ function checkPlatform(){
       theUrl = "http://www.qq.com";
   }
 }
-  $(document).ready(function(){
+  window.onload = function(){
     alert(navigator.platform);
     checkPlatform();
     location.href = theUrl;
-  });
+  };
 </script>
 </head>
 <body>
